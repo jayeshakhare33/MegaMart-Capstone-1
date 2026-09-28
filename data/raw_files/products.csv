@@ -1,0 +1,15 @@
+product_id,product_name,category,unit_price,supplier_id
+1001,Basmati Rice 5kg,Groceries,450.0,1
+1002,Wheat Flour 1kg,Groceries,35.0,1
+1003,Amul Milk 1L,Dairy,55.0,3
+1004,Paneer 250g,Dairy,180.0,2
+1005,Refined Oil 1L,Cooking Oil,-100.0,2
+1006,Mustard Oil 500ml,Cooking Oil,120.0,2
+1007,Turmeric Powder 100g,Spices,0.0,1
+1008,Chili Powder 100g,Spices,65.0,5
+1009,Coca Cola 1.5L,Beverages,85.0,1
+1010,Mineral Water 1L,Beverages,25.0,5
+1011,Lays Chips 40g,Snacks,30.0,4
+1012,Biscuits Mix 200g,Snacks,40.0,1
+1013,Shampoo 200ml,Personal Care,120.0,1
+1014,Soap 125g,Personal Care,35.0,1
