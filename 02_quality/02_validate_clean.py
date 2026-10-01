@@ -99,6 +99,7 @@ def build_issue_df(
     severity,
     description,
     action_taken,
+    source_columns=None,
 ):
     """
     Build a standardized DataFrame containing quality issues.
@@ -129,10 +130,19 @@ def build_issue_df(
     action_taken : str
         What the downstream Silver stage should do.
 
+    source_columns : list[str] or None
+        Column names from the source DataFrame to include in raw_record.
+        If None, df.columns is read (triggers an Analyze RPC under
+        Spark Connect).  Pass a pre-computed list to avoid repeated
+        schema fetches when calling this function many times.
+
     Returns
     -------
     pyspark.sql.DataFrame
     """
+
+    if source_columns is None:
+        source_columns = df.columns
 
     return (
         df
@@ -151,7 +161,7 @@ def build_issue_df(
                 F.struct(
                     *[
                         F.col(column)
-                        for column in df.columns
+                        for column in source_columns
                     ]
                 )
             ).alias("raw_record"),
@@ -466,6 +476,24 @@ supplier_issues.append(
         "ERROR",
         "Multiple records contain the same supplier_id.",
         "KEEP_FIRST_RECORD_AND_QUARANTINE_DUPLICATES",
+    )
+)
+
+
+# Missing contact person
+supplier_issues.append(
+    build_issue_df(
+        suppliers,
+        "suppliers",
+        "supplier_id",
+        (
+            F.col("contact_person").isNull()
+            | (F.trim(F.col("contact_person")) == "")
+        ),
+        "MISSING_CONTACT_PERSON",
+        "WARNING",
+        "contact_person is NULL or blank.",
+        "STANDARDIZE_TO_UNKNOWN_IN_SILVER",
     )
 )
 
