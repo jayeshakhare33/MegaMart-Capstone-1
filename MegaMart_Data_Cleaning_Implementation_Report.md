@@ -15,18 +15,28 @@ The project follows the source-of-truth rule documented in the data quality work
 The implemented pipeline follows this pattern:
 
 Generated CSV files
+
         |
+
         v
 Unity Catalog Volume
+        
         |
+        
         v
 Bronze Delta tables
+        
         |
+        
         v
 Quality validation
+        
         |
+        
         +----> Audit findings
+        
         |
+        
         v
 Silver Delta tables
 
