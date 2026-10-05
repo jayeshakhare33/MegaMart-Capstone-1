@@ -14,7 +14,7 @@ The project follows the source-of-truth rule documented in the data quality work
 
 The implemented pipeline follows this pattern:
 
-Generated CSV files
+``Generated CSV files
         |
         v
 Unity Catalog Volume        
@@ -28,7 +28,7 @@ Quality validation
         +----> Audit findings
         |
         v
-Silver Delta tables
+Silver Delta tables``
 
 ### Bronze principle
 Bronze stores the raw generated data and is not modified by the quality stage.
