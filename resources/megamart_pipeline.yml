@@ -1,0 +1,78 @@
+resources:
+  jobs:
+    MegaMart_Pipeline:
+      name: MegaMart Pipeline
+      tasks:
+        - task_key: 00_setup
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/00_setup/00_setup.py
+          environment_key: default
+        - task_key: 01_ingestion
+          depends_on:
+            - task_key: 00_setup
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/01_ingestion/01_ingest_raw.py
+          environment_key: default
+        - task_key: 02_quality
+          depends_on:
+            - task_key: 01_ingestion
+          notebook_task:
+            notebook_path: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/02_quality/02_validate_clean
+            source: WORKSPACE
+          environment_key: default
+        - task_key: 03_build_silver
+          depends_on:
+            - task_key: 02_quality
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/03_model/03_build_silver.py
+          environment_key: default
+        - task_key: 03B_gold_views
+          depends_on:
+            - task_key: 03_build_silver
+          sql_task:
+            file:
+              path: /Workspace/Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/03B_generate_views/gold_layer_views.sql
+              source: WORKSPACE
+            warehouse_id: bd0f9fb535e265b3
+        - task_key: 05_inventory
+          depends_on:
+            - task_key: 03B_gold_views
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/05_inventory/05_inventory_optimizer.py
+          environment_key: default
+        - task_key: 04_sales_report
+          depends_on:
+            - task_key: 05_inventory
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/04_sales/04_sales_report.py
+          environment_key: default
+        - task_key: 06_kpi_pipeline
+          depends_on:
+            - task_key: 04_sales_report
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/06_kpi/06_kpi_pipeline.py
+          environment_key: default
+        - task_key: 06_kpi_report
+          depends_on:
+            - task_key: 06_kpi_pipeline
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/06_kpi/06_kpi_dashboard_report.py
+          environment_key: default
+        - task_key: 07_dashboard
+          depends_on:
+            - task_key: 06_kpi_report
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/scripts/07_dashboard/07_dashboard.py
+          environment_key: default
+        - task_key: verify
+          depends_on:
+            - task_key: 07_dashboard
+          spark_python_task:
+            python_file: /Users/akharejayesh@gmail.com/MegaMart-Capstone-1/verify_pipeline.py
+          environment_key: default
+      queue:
+        enabled: true
+      environments:
+        - environment_key: default
+          spec:
+            client: "2"

@@ -1,0 +1,71 @@
+store_id,store_name,product_id,product_name,category,total_quantity_sold,transaction_count,avg_selling_price,total_revenue,revenue_share_pct,revenue_rank_within_store
+1,HITEC City Store,1001,Basmati Rice 5kg,Groceries,153,27,450.00,68850.00,30.82,1
+1,HITEC City Store,1005,Refined Oil 1L,Cooking Oil,192,34,185.00,35520.00,15.90,2
+1,HITEC City Store,1004,Paneer 250g,Dairy,165,28,180.00,29700.00,13.30,3
+1,HITEC City Store,1013,Shampoo 200ml,Personal Care,145,26,120.00,17400.00,7.79,4
+1,HITEC City Store,1006,Mustard Oil 500ml,Cooking Oil,135,24,120.00,16200.00,7.25,5
+1,HITEC City Store,1008,Chili Powder 100g,Spices,152,28,65.00,9880.00,4.42,6
+1,HITEC City Store,1009,Coca Cola 1.5L,Beverages,108,22,85.00,9180.00,4.11,7
+1,HITEC City Store,1003,Amul Milk 1L,Dairy,154,28,55.00,8470.00,3.79,8
+1,HITEC City Store,1012,Biscuits Mix 200g,Snacks,166,30,40.00,6640.00,2.97,9
+1,HITEC City Store,1007,Turmeric Powder 100g,Spices,113,23,45.00,5085.00,2.28,10
+1,HITEC City Store,1014,Soap 125g,Personal Care,132,26,35.00,4620.00,2.07,11
+1,HITEC City Store,1002,Wheat Flour 1kg,Groceries,131,22,35.00,4585.00,2.05,12
+1,HITEC City Store,1011,Lays Chips 40g,Snacks,131,23,30.00,3930.00,1.76,13
+1,HITEC City Store,1010,Mineral Water 1L,Beverages,133,23,25.00,3325.00,1.49,14
+2,Banjara Hills Store,1001,Basmati Rice 5kg,Groceries,153,26,450.00,68850.00,29.52,1
+2,Banjara Hills Store,1005,Refined Oil 1L,Cooking Oil,165,31,185.00,30525.00,13.09,2
+2,Banjara Hills Store,1013,Shampoo 200ml,Personal Care,205,31,120.00,24600.00,10.55,3
+2,Banjara Hills Store,1004,Paneer 250g,Dairy,136,27,180.00,24480.00,10.49,4
+2,Banjara Hills Store,1006,Mustard Oil 500ml,Cooking Oil,160,27,120.00,19200.00,8.23,5
+2,Banjara Hills Store,1009,Coca Cola 1.5L,Beverages,151,24,85.00,12835.00,5.50,6
+2,Banjara Hills Store,1008,Chili Powder 100g,Spices,162,30,65.00,10530.00,4.51,7
+2,Banjara Hills Store,1007,Turmeric Powder 100g,Spices,177,24,45.00,7965.00,3.41,8
+2,Banjara Hills Store,1012,Biscuits Mix 200g,Snacks,189,35,40.00,7560.00,3.24,9
+2,Banjara Hills Store,1003,Amul Milk 1L,Dairy,122,22,55.00,6710.00,2.88,10
+2,Banjara Hills Store,1002,Wheat Flour 1kg,Groceries,173,31,35.00,6055.00,2.60,11
+2,Banjara Hills Store,1010,Mineral Water 1L,Beverages,192,34,25.00,4800.00,2.06,12
+2,Banjara Hills Store,1011,Lays Chips 40g,Snacks,158,28,30.00,4740.00,2.03,13
+2,Banjara Hills Store,1014,Soap 125g,Personal Care,126,28,35.00,4410.00,1.89,14
+3,Ameerpet Store,1001,Basmati Rice 5kg,Groceries,147,25,450.00,66150.00,29.55,1
+3,Ameerpet Store,1013,Shampoo 200ml,Personal Care,200,36,120.00,24000.00,10.72,2
+3,Ameerpet Store,1004,Paneer 250g,Dairy,131,28,180.00,23580.00,10.53,3
+3,Ameerpet Store,1006,Mustard Oil 500ml,Cooking Oil,181,32,120.00,21720.00,9.70,4
+3,Ameerpet Store,1005,Refined Oil 1L,Cooking Oil,108,20,185.00,19980.00,8.93,5
+3,Ameerpet Store,1009,Coca Cola 1.5L,Beverages,158,28,85.00,13430.00,6.00,6
+3,Ameerpet Store,1008,Chili Powder 100g,Spices,178,30,65.00,11570.00,5.17,7
+3,Ameerpet Store,1003,Amul Milk 1L,Dairy,156,28,55.00,8580.00,3.83,8
+3,Ameerpet Store,1007,Turmeric Powder 100g,Spices,170,27,45.00,7650.00,3.42,9
+3,Ameerpet Store,1002,Wheat Flour 1kg,Groceries,183,31,35.00,6405.00,2.86,10
+3,Ameerpet Store,1011,Lays Chips 40g,Snacks,179,30,30.00,5370.00,2.40,11
+3,Ameerpet Store,1014,Soap 125g,Personal Care,153,30,35.00,5355.00,2.39,12
+3,Ameerpet Store,1010,Mineral Water 1L,Beverages,207,33,25.00,5175.00,2.31,13
+3,Ameerpet Store,1012,Biscuits Mix 200g,Snacks,122,25,40.00,4880.00,2.18,14
+4,Kukatpally Store,1001,Basmati Rice 5kg,Groceries,100,25,450.00,45000.00,20.56,1
+4,Kukatpally Store,1004,Paneer 250g,Dairy,208,32,180.00,37440.00,17.11,2
+4,Kukatpally Store,1005,Refined Oil 1L,Cooking Oil,146,31,185.00,27010.00,12.34,3
+4,Kukatpally Store,1006,Mustard Oil 500ml,Cooking Oil,175,30,120.00,21000.00,9.59,4
+4,Kukatpally Store,1013,Shampoo 200ml,Personal Care,165,29,120.00,19800.00,9.05,5
+4,Kukatpally Store,1009,Coca Cola 1.5L,Beverages,154,30,85.00,13090.00,5.98,6
+4,Kukatpally Store,1008,Chili Powder 100g,Spices,148,26,65.00,9620.00,4.40,7
+4,Kukatpally Store,1003,Amul Milk 1L,Dairy,153,27,55.00,8415.00,3.84,8
+4,Kukatpally Store,1007,Turmeric Powder 100g,Spices,182,30,45.00,8190.00,3.74,9
+4,Kukatpally Store,1012,Biscuits Mix 200g,Snacks,181,29,40.00,7240.00,3.31,10
+4,Kukatpally Store,1014,Soap 125g,Personal Care,195,36,35.00,6825.00,3.12,11
+4,Kukatpally Store,1011,Lays Chips 40g,Snacks,209,31,30.00,6270.00,2.86,12
+4,Kukatpally Store,1002,Wheat Flour 1kg,Groceries,133,28,35.00,4655.00,2.13,13
+4,Kukatpally Store,1010,Mineral Water 1L,Beverages,173,30,25.00,4325.00,1.98,14
+5,Dilsukhnagar Store,1001,Basmati Rice 5kg,Groceries,142,28,450.00,63900.00,29.03,1
+5,Dilsukhnagar Store,1005,Refined Oil 1L,Cooking Oil,164,33,185.00,30340.00,13.78,2
+5,Dilsukhnagar Store,1004,Paneer 250g,Dairy,149,26,180.00,26820.00,12.18,3
+5,Dilsukhnagar Store,1013,Shampoo 200ml,Personal Care,132,24,120.00,15840.00,7.20,4
+5,Dilsukhnagar Store,1006,Mustard Oil 500ml,Cooking Oil,122,24,120.00,14640.00,6.65,5
+5,Dilsukhnagar Store,1009,Coca Cola 1.5L,Beverages,148,25,85.00,12580.00,5.71,6
+5,Dilsukhnagar Store,1003,Amul Milk 1L,Dairy,198,33,55.00,10890.00,4.95,7
+5,Dilsukhnagar Store,1008,Chili Powder 100g,Spices,140,31,65.00,9100.00,4.13,8
+5,Dilsukhnagar Store,1007,Turmeric Powder 100g,Spices,188,31,45.00,8460.00,3.84,9
+5,Dilsukhnagar Store,1014,Soap 125g,Personal Care,194,35,35.00,6790.00,3.08,10
+5,Dilsukhnagar Store,1012,Biscuits Mix 200g,Snacks,165,30,40.00,6600.00,3.00,11
+5,Dilsukhnagar Store,1002,Wheat Flour 1kg,Groceries,185,36,35.00,6475.00,2.94,12
+5,Dilsukhnagar Store,1010,Mineral Water 1L,Beverages,157,28,25.00,3925.00,1.78,13
+5,Dilsukhnagar Store,1011,Lays Chips 40g,Snacks,126,27,30.00,3780.00,1.72,14

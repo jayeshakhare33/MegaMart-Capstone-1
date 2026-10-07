@@ -1,0 +1,6 @@
+store_id,store_name,location,transaction_count,total_quantity_sold,total_revenue,average_transaction_value,unique_products_sold,unique_categories_sold,revenue_rank,transaction_count_rank,store_revenue_share_pct,inventory_turnover_ratio,inventory_turnover_status,market_share_pct,market_share_status,current_inventory_units,out_of_stock_skus,low_stock_skus,healthy_stock_skus,inventory_health_pct
+2,Banjara Hills Store,Banjara Hills,398,2269,233260.00,586.08,14,7,1,4,20.84,0.6949,APPROXIMATE_UNITS_BASED_SINGLE_SNAPSHOT,20.84,INTERNAL_CHAIN_SHARE,3265,1,1,12,85.71
+3,Ameerpet Store,Ameerpet,403,2273,223845.00,555.45,14,7,2,3,19.99,0.5813,APPROXIMATE_UNITS_BASED_SINGLE_SNAPSHOT,19.99,INTERNAL_CHAIN_SHARE,3910,0,1,13,92.86
+1,HITEC City Store,HITEC City,364,2010,223385.00,613.70,14,7,3,5,19.95,0.6373,APPROXIMATE_UNITS_BASED_SINGLE_SNAPSHOT,19.95,INTERNAL_CHAIN_SHARE,3154,1,1,12,85.71
+5,Dilsukhnagar Store,Dilsukhnagar,411,2210,220140.00,535.62,14,7,4,2,19.66,0.5817,APPROXIMATE_UNITS_BASED_SINGLE_SNAPSHOT,19.66,INTERNAL_CHAIN_SHARE,3799,1,1,12,85.71
+4,Kukatpally Store,Kukatpally,414,2322,218880.00,528.70,14,7,5,1,19.55,0.8193,APPROXIMATE_UNITS_BASED_SINGLE_SNAPSHOT,19.55,INTERNAL_CHAIN_SHARE,2834,3,0,11,78.57

@@ -1,0 +1,16 @@
+store_id,store_name,category,category_revenue,units_sold,transaction_count,cat_rank
+1,HITEC City Store,Groceries,73435.00,284,49,1
+1,HITEC City Store,Cooking Oil,51720.00,327,58,2
+1,HITEC City Store,Dairy,38170.00,319,56,3
+2,Banjara Hills Store,Groceries,74905.00,326,57,1
+2,Banjara Hills Store,Cooking Oil,49725.00,325,58,2
+2,Banjara Hills Store,Dairy,31190.00,258,49,3
+3,Ameerpet Store,Groceries,72555.00,330,56,1
+3,Ameerpet Store,Cooking Oil,41700.00,289,52,2
+3,Ameerpet Store,Dairy,32160.00,287,56,3
+4,Kukatpally Store,Groceries,49655.00,233,53,1
+4,Kukatpally Store,Cooking Oil,48010.00,321,61,2
+4,Kukatpally Store,Dairy,45855.00,361,59,3
+5,Dilsukhnagar Store,Groceries,70375.00,327,64,1
+5,Dilsukhnagar Store,Cooking Oil,44980.00,286,57,2
+5,Dilsukhnagar Store,Dairy,37710.00,347,59,3

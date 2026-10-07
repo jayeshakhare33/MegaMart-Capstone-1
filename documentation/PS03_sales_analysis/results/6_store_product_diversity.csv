@@ -1,0 +1,6 @@
+store_id,store_name,location,unique_products_sold,unique_categories_sold,total_quantity_sold,diversity_rank
+5,Dilsukhnagar Store,Dilsukhnagar,14,7,2210,1
+4,Kukatpally Store,Kukatpally,14,7,2322,1
+2,Banjara Hills Store,Banjara Hills,14,7,2269,1
+3,Ameerpet Store,Ameerpet,14,7,2273,1
+1,HITEC City Store,HITEC City,14,7,2010,1

@@ -1,0 +1,6 @@
+store_id,store_name,location,total_revenue,transaction_count,avg_transaction_value,revenue_rank
+2,Banjara Hills Store,Banjara Hills,233260.00,398,586.08,1
+3,Ameerpet Store,Ameerpet,223845.00,403,555.45,2
+1,HITEC City Store,HITEC City,223385.00,364,613.70,3
+5,Dilsukhnagar Store,Dilsukhnagar,220140.00,411,535.62,4
+4,Kukatpally Store,Kukatpally,218880.00,414,528.70,5

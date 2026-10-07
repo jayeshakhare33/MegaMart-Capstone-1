@@ -1,0 +1,15 @@
+overall_velocity_rank,store_id,store_name,product_id,product_name,category,total_quantity_sold,average_daily_sales,quantity_on_hand,estimated_days_of_inventory,velocity_class
+1,4,Kukatpally Store,1011,Lays Chips 40g,Snacks,209,0.5710,213,373.00,FAST_MOVING
+2,4,Kukatpally Store,1004,Paneer 250g,Dairy,208,0.5683,459,807.66,FAST_MOVING
+3,3,Ameerpet Store,1010,Mineral Water 1L,Beverages,207,0.5656,347,613.54,FAST_MOVING
+4,2,Banjara Hills Store,1013,Shampoo 200ml,Personal Care,205,0.5601,377,673.08,FAST_MOVING
+5,3,Ameerpet Store,1013,Shampoo 200ml,Personal Care,200,0.5464,344,629.52,FAST_MOVING
+6,5,Dilsukhnagar Store,1003,Amul Milk 1L,Dairy,198,0.5410,410,757.88,FAST_MOVING
+7,4,Kukatpally Store,1014,Soap 125g,Personal Care,195,0.5328,227,426.06,FAST_MOVING
+8,5,Dilsukhnagar Store,1014,Soap 125g,Personal Care,194,0.5301,247,465.99,FAST_MOVING
+9,1,HITEC City Store,1005,Refined Oil 1L,Cooking Oil,192,0.5246,189,360.28,FAST_MOVING
+10,2,Banjara Hills Store,1010,Mineral Water 1L,Beverages,192,0.5246,396,754.88,FAST_MOVING
+11,2,Banjara Hills Store,1012,Biscuits Mix 200g,Snacks,189,0.5164,58,112.32,FAST_MOVING
+12,5,Dilsukhnagar Store,1007,Turmeric Powder 100g,Spices,188,0.5137,402,782.62,FAST_MOVING
+13,5,Dilsukhnagar Store,1002,Wheat Flour 1kg,Groceries,185,0.5055,0,0.00,FAST_MOVING
+14,3,Ameerpet Store,1002,Wheat Flour 1kg,Groceries,183,0.5000,381,762.00,FAST_MOVING

@@ -1,0 +1,6 @@
+product_id,product_name,category,total_quantity_sold,total_revenue,transaction_count,quantity_rank
+1010,Mineral Water 1L,Beverages,862,21550.00,148,1
+1013,Shampoo 200ml,Personal Care,847,101640.00,146,2
+1007,Turmeric Powder 100g,Spices,830,37350.00,135,3
+1012,Biscuits Mix 200g,Snacks,823,32920.00,149,4
+1002,Wheat Flour 1kg,Groceries,805,28175.00,148,5

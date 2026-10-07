@@ -1,0 +1,6 @@
+store_id,store_name,total_products,out_of_stock_products,low_stock_products,healthy_stock_products,total_quantity_on_hand
+1,HITEC City Store,14,1,1,12,3154
+2,Banjara Hills Store,14,1,1,12,3265
+3,Ameerpet Store,14,0,1,13,3910
+4,Kukatpally Store,14,3,0,11,2834
+5,Dilsukhnagar Store,14,1,1,12,3799

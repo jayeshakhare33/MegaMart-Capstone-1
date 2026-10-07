@@ -1,0 +1,13 @@
+store_id,store_name,product_id,product_name,category,total_quantity_sold,average_daily_sales,quantity_on_hand,estimated_days_of_inventory,velocity_class
+3,Ameerpet Store,1005,Refined Oil 1L,Cooking Oil,108,0.2951,216,732.00,SLOW_MOVING
+1,HITEC City Store,1009,Coca Cola 1.5L,Beverages,108,0.2951,170,576.11,SLOW_MOVING
+1,HITEC City Store,1007,Turmeric Powder 100g,Spices,113,0.3087,440,1425.13,SLOW_MOVING
+2,Banjara Hills Store,1003,Amul Milk 1L,Dairy,122,0.3333,484,1452.00,SLOW_MOVING
+3,Ameerpet Store,1012,Biscuits Mix 200g,Snacks,122,0.3333,317,951.00,SLOW_MOVING
+5,Dilsukhnagar Store,1006,Mustard Oil 500ml,Cooking Oil,122,0.3333,175,525.00,SLOW_MOVING
+2,Banjara Hills Store,1014,Soap 125g,Personal Care,126,0.3443,297,862.72,SLOW_MOVING
+5,Dilsukhnagar Store,1011,Lays Chips 40g,Snacks,126,0.3443,290,842.38,SLOW_MOVING
+1,HITEC City Store,1002,Wheat Flour 1kg,Groceries,131,0.3579,237,662.15,SLOW_MOVING
+1,HITEC City Store,1011,Lays Chips 40g,Snacks,131,0.3579,138,385.56,SLOW_MOVING
+3,Ameerpet Store,1004,Paneer 250g,Dairy,131,0.3579,136,379.97,SLOW_MOVING
+5,Dilsukhnagar Store,1013,Shampoo 200ml,Personal Care,132,0.3607,404,1120.18,SLOW_MOVING

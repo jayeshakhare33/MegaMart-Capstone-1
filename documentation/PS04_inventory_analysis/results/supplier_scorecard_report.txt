@@ -1,0 +1,233 @@
+============================================================================
+MEGAMART — INVENTORY OPTIMIZATION REPORT
+Problem Statement 4: Inventory Optimization
+Generated: 2026-10-07 07:04 UTC
+Data Period: 2024-01-01 to 2024-12-31
+Scope: 5 stores × 14 products = 70 store/product combinations
+============================================================================
+
+TABLE OF CONTENTS
+  1. Q22 — Out-of-Stock and Low-Stock Products (< 50 units)
+  2. Q23 — Fastest-Moving Products (Highest Sales Velocity)
+  3. Q24 — Slow-Moving Overstock Candidates
+  4. Q25 — Average Days to Deliver by Supplier
+  5. Q26 — Supplier Reliability Rankings (On-Time Delivery Rate)
+  6. Q27 — Reorder Point Recommendations
+  7. Store-Level Inventory Health Summary
+  8. Procurement Action Recommendations
+
+============================================================================
+1. Q22 — OUT-OF-STOCK AND LOW-STOCK PRODUCTS (< 50 UNITS)
+============================================================================
+
+Stock status thresholds:
+  OUT_OF_STOCK : quantity_on_hand = 0
+  LOW_STOCK    : quantity_on_hand < 50
+  HEALTHY      : quantity_on_hand >= 50
+
+Summary:
+  Out-of-stock products : 6
+  Low-stock products    : 4
+  Total stock alerts    : 10
+  Healthy products      : 60
+
+OUT-OF-STOCK ITEMS (6):
+---------------------------------------------------------------------------
+  Store                        Product                    Qty   Supplier
+---------------------------------------------------------------------------
+  HITEC City Store             Soap 125g                    0   ABC Wholesale Pvt Ltd
+  Banjara Hills Store          Wheat Flour 1kg              0   ABC Wholesale Pvt Ltd
+  Kukatpally Store             Basmati Rice 5kg             0   ABC Wholesale Pvt Ltd
+  Kukatpally Store             Amul Milk 1L                 0   Fresh Produce Co
+  Kukatpally Store             Mineral Water 1L             0   Premium Imports Ltd
+  Dilsukhnagar Store           Wheat Flour 1kg              0   ABC Wholesale Pvt Ltd
+---------------------------------------------------------------------------
+
+LOW-STOCK ITEMS (4):
+---------------------------------------------------------------------------
+  Store                        Product                    Qty   Supplier
+---------------------------------------------------------------------------
+  Dilsukhnagar Store           Basmati Rice 5kg            10   ABC Wholesale Pvt Ltd
+  HITEC City Store             Basmati Rice 5kg            12   ABC Wholesale Pvt Ltd
+  Ameerpet Store               Mustard Oil 500ml           32   XYZ Foods Distribution
+  Banjara Hills Store          Coca Cola 1.5L              34   ABC Wholesale Pvt Ltd
+---------------------------------------------------------------------------
+
+============================================================================
+2. Q23 — FASTEST-MOVING PRODUCTS (HIGHEST SALES VELOCITY)
+============================================================================
+
+Velocity classification:
+  FAST_MOVING : top 20th percentile by total quantity sold
+  NORMAL_MOVING : middle 60th percentile
+  SLOW_MOVING : bottom 20th percentile
+  average_daily_sales = total_quantity_sold / 366 (2024 is a leap year)
+
+FAST-MOVING STORE/PRODUCT COMBINATIONS (14):
+---------------------------------------------------------------------------
+ Rank  Store                  Product                Qty Sold Avg Daily On Hand Days Inv
+---------------------------------------------------------------------------
+    1  Kukatpally Store       Lays Chips 40g              209     0.571     213     373
+    2  Kukatpally Store       Paneer 250g                 208     0.568     459     808
+    3  Ameerpet Store         Mineral Water 1L            207     0.566     347     614
+    4  Banjara Hills Store    Shampoo 200ml               205     0.560     377     673
+    5  Ameerpet Store         Shampoo 200ml               200     0.546     344     630
+    6  Dilsukhnagar Store     Amul Milk 1L                198     0.541     410     758
+    7  Kukatpally Store       Soap 125g                   195     0.533     227     426
+    8  Dilsukhnagar Store     Soap 125g                   194     0.530     247     466
+    9  HITEC City Store       Refined Oil 1L              192     0.525     189     360
+   10  Banjara Hills Store    Mineral Water 1L            192     0.525     396     755
+   11  Banjara Hills Store    Biscuits Mix 200g           189     0.516      58     112
+   12  Dilsukhnagar Store     Turmeric Powder 100g        188     0.514     402     783
+   13  Dilsukhnagar Store     Wheat Flour 1kg             185     0.505       0       0
+   14  Ameerpet Store         Wheat Flour 1kg             183     0.500     381     762
+---------------------------------------------------------------------------
+
+============================================================================
+3. Q24 — SLOW-MOVING OVERSTOCK CANDIDATES
+============================================================================
+
+Criteria: velocity_class = 'SLOW_MOVING' AND quantity_on_hand >= 50
+These products have ample stock but very low sales velocity, tying up
+warehouse space and capital.
+
+OVERSTOCK CANDIDATES (12):
+---------------------------------------------------------------------------
+  Store                  Product                Qty Sold Avg Daily On Hand Days Inv
+---------------------------------------------------------------------------
+  Ameerpet Store         Refined Oil 1L              108     0.295     216     732
+  HITEC City Store       Coca Cola 1.5L              108     0.295     170     576
+  HITEC City Store       Turmeric Powder 100g        113     0.309     440    1425
+  Banjara Hills Store    Amul Milk 1L                122     0.333     484    1452
+  Ameerpet Store         Biscuits Mix 200g           122     0.333     317     951
+  Dilsukhnagar Store     Mustard Oil 500ml           122     0.333     175     525
+  Banjara Hills Store    Soap 125g                   126     0.344     297     863
+  Dilsukhnagar Store     Lays Chips 40g              126     0.344     290     842
+  HITEC City Store       Wheat Flour 1kg             131     0.358     237     662
+  HITEC City Store       Lays Chips 40g              131     0.358     138     386
+  Ameerpet Store         Paneer 250g                 131     0.358     136     380
+  Dilsukhnagar Store     Shampoo 200ml               132     0.361     404    1120
+---------------------------------------------------------------------------
+
+============================================================================
+4. Q25 — AVERAGE DAYS TO DELIVER BY SUPPLIER
+============================================================================
+
+Average lead time is computed from delivered purchase orders only (those
+with a non-null delivery_date). lead_time_days = delivery_date - order_date.
+
+---------------------------------------------------------------------------
+  Supplier                       Avg Days   Min   Max  Delivered  Total POs
+---------------------------------------------------------------------------
+  Premium Imports Ltd               8.25d    3d   14d         48         58
+  Fresh Produce Co                  8.41d    3d   14d         49         64
+  ABC Wholesale Pvt Ltd             8.48d    3d   14d         42         49
+  XYZ Foods Distribution            8.53d    3d   14d         53         61
+  Dairy Supplies International      8.59d    3d   14d         51         68
+---------------------------------------------------------------------------
+
+============================================================================
+5. Q26 — SUPPLIER RELIABILITY RANKINGS (ON-TIME DELIVERY RATE)
+============================================================================
+
+delivery_reliability_pct = delivered_orders / total_purchase_orders * 100
+
+Note: The source data does not define an SLA threshold or promised delivery
+date. Reliability is therefore measured as the percentage of POs that have
+been delivered (delivery_date IS NOT NULL), not as on-time-vs-SLA.
+Definition: RELIABILITY_BASED_ON_DELIVERED_ORDERS
+
+---------------------------------------------------------------------------
+ Rank  Supplier                        Reliability   Avg Lead  Delivered  Failed
+---------------------------------------------------------------------------
+    1  XYZ Foods Distribution               86.89%      8.53d         53       8
+    2  ABC Wholesale Pvt Ltd                85.71%      8.48d         42       7
+    3  Premium Imports Ltd                  82.76%      8.25d         48      10
+    4  Fresh Produce Co                     76.56%      8.41d         49      15
+    5  Dairy Supplies International         75.00%      8.59d         51      17
+---------------------------------------------------------------------------
+
+============================================================================
+6. Q27 — REORDER POINT RECOMMENDATIONS
+============================================================================
+
+Reorder Point Formula:
+  Safety Stock     = Z × DailyDemandStdDev × √LeadTime
+  Reorder Point    = AverageDailyDemand × LeadTime + SafetyStock
+  Recommended Qty  = max(ReorderPoint - QuantityOnHand, 0)
+  Z = 1.65 (approx. 95% one-sided service level)
+
+Method: DEMAND_BASED_REORDER_POINT
+Lead time source: supplier_scorecard average_lead_time_days (fallback to
+chain-wide average if supplier has no delivered orders)
+
+Summary:
+  Total store/product combinations : 70
+  REORDER recommended             : 8
+  NO_REORDER                      : 62
+
+Priority breakdown:
+  CRITICAL (0 units on hand, at or below reorder point) : 6
+  HIGH    (at or below reorder point)                    : 2
+
+REORDER RECOMMENDATIONS (8):
+---------------------------------------------------------------------------
+ Priority   Store            Product              OnHand AvgDaily   Lead Safety   ROP OrderQty  Supplier
+---------------------------------------------------------------------------
+ CRITICAL   Banjara Hills Store Wheat Flour 1kg           0    0.474   8.5d      9    14       14  ABC Wholesale Pvt Ltd
+ CRITICAL   Kukatpally Store Mineral Water 1L          0    0.474   8.2d     10    14       14  Premium Imports Ltd
+ CRITICAL   Dilsukhnagar Store Wheat Flour 1kg           0    0.507   8.5d      9    14       14  ABC Wholesale Pvt Ltd
+ CRITICAL   Kukatpally Store Amul Milk 1L              0    0.419   8.4d      9    13       13  Fresh Produce Co
+ CRITICAL   HITEC City Store Soap 125g                 0    0.362   8.5d      8    12       12  ABC Wholesale Pvt Ltd
+ CRITICAL   Kukatpally Store Basmati Rice 5kg          0    0.274   8.5d      6     9        9  ABC Wholesale Pvt Ltd
+ HIGH       Dilsukhnagar Store Basmati Rice 5kg         10    0.389   8.5d      8    12        2  ABC Wholesale Pvt Ltd
+ HIGH       HITEC City Store Basmati Rice 5kg         12    0.419   8.5d      9    13        1  ABC Wholesale Pvt Ltd
+---------------------------------------------------------------------------
+
+Supplier reorder workload:
+  ABC Wholesale Pvt Ltd          : 6 items, 52 units total
+  Premium Imports Ltd            : 1 items, 14 units total
+  Fresh Produce Co               : 1 items, 13 units total
+
+============================================================================
+7. STORE-LEVEL INVENTORY HEALTH SUMMARY
+============================================================================
+
+---------------------------------------------------------------------------
+  Store                     Total   OOS   Low  Healthy  Total On Hand
+---------------------------------------------------------------------------
+  HITEC City Store             14     1     1       12          3,154
+  Banjara Hills Store          14     1     1       12          3,265
+  Ameerpet Store               14     0     1       13          3,910
+  Kukatpally Store             14     3     0       11          2,834
+  Dilsukhnagar Store           14     1     1       12          3,799
+---------------------------------------------------------------------------
+
+============================================================================
+8. PROCUREMENT ACTION RECOMMENDATIONS
+============================================================================
+
+IMMEDIATE ACTIONS (CRITICAL — place POs today):
+  1. ABC Wholesale Pvt Ltd: Order Wheat Flour 1kg for Banjara Hills Store (14 units).
+  2. Premium Imports Ltd: Order Mineral Water 1L for Kukatpally Store (14 units).
+  3. ABC Wholesale Pvt Ltd: Order Wheat Flour 1kg for Dilsukhnagar Store (14 units).
+  4. Fresh Produce Co: Order Amul Milk 1L for Kukatpally Store (13 units).
+  5. ABC Wholesale Pvt Ltd: Order Soap 125g for HITEC City Store (12 units).
+  6. ABC Wholesale Pvt Ltd: Order Basmati Rice 5kg for Kukatpally Store (9 units).
+
+SHORT-TERM ACTIONS (HIGH — next order cycle):
+  7. ABC Wholesale Pvt Ltd: Order Basmati Rice 5kg for Dilsukhnagar Store (2 units) — small gap, bundle with next regular order.
+  8. ABC Wholesale Pvt Ltd: Order Basmati Rice 5kg for HITEC City Store (1 units) — small gap, bundle with next regular order.
+
+OVERSTOCK REDISTRIBUTION:
+  Ameerpet Store Refined Oil 1L (216 units, 732 days inventory) — consider redistribution or promotional clearance.
+  HITEC City Store Coca Cola 1.5L (170 units, 576 days inventory) — consider redistribution or promotional clearance.
+  HITEC City Store Turmeric Powder 100g (440 units, 1425 days inventory) — consider redistribution or promotional clearance.
+
+SUPPLIER MANAGEMENT:
+  • XYZ Foods Distribution: Most reliable supplier (86.89%) — preferential for future sourcing where product range overlaps.
+  • Dairy Supplies International: Lowest reliability (75.00%) with 17 failed orders — consider diversifying to alternative suppliers.
+
+============================================================================
+End of Inventory Optimization Report
+============================================================================

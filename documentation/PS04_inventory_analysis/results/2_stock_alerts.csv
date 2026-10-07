@@ -1,0 +1,11 @@
+store_id,store_name,location,product_id,product_name,category,quantity_on_hand,stock_status,supplier_id,supplier_name
+1,HITEC City Store,HITEC City,1014,Soap 125g,Personal Care,0,OUT_OF_STOCK,1,ABC Wholesale Pvt Ltd
+2,Banjara Hills Store,Banjara Hills,1002,Wheat Flour 1kg,Groceries,0,OUT_OF_STOCK,1,ABC Wholesale Pvt Ltd
+4,Kukatpally Store,Kukatpally,1001,Basmati Rice 5kg,Groceries,0,OUT_OF_STOCK,1,ABC Wholesale Pvt Ltd
+4,Kukatpally Store,Kukatpally,1003,Amul Milk 1L,Dairy,0,OUT_OF_STOCK,3,Fresh Produce Co
+4,Kukatpally Store,Kukatpally,1010,Mineral Water 1L,Beverages,0,OUT_OF_STOCK,5,Premium Imports Ltd
+5,Dilsukhnagar Store,Dilsukhnagar,1002,Wheat Flour 1kg,Groceries,0,OUT_OF_STOCK,1,ABC Wholesale Pvt Ltd
+5,Dilsukhnagar Store,Dilsukhnagar,1001,Basmati Rice 5kg,Groceries,10,LOW_STOCK,1,ABC Wholesale Pvt Ltd
+1,HITEC City Store,HITEC City,1001,Basmati Rice 5kg,Groceries,12,LOW_STOCK,1,ABC Wholesale Pvt Ltd
+3,Ameerpet Store,Ameerpet,1006,Mustard Oil 500ml,Cooking Oil,32,LOW_STOCK,2,XYZ Foods Distribution
+2,Banjara Hills Store,Banjara Hills,1009,Coca Cola 1.5L,Beverages,34,LOW_STOCK,1,ABC Wholesale Pvt Ltd

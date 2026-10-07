@@ -1,0 +1,94 @@
+========================================================================
+MEGAMART SALES ANALYSIS - SUMMARY REPORT (2024)
+========================================================================
+Generated: 2026-10-06T20:30:12.884830+00:00
+Data source: megamart_dev.silver.* (sales_transactions, stores, products)
+Output directory: /Workspace/Users/akharejayesh@gmail.com/MegaMart-Capstone-1/PS03_sales_analysis/results
+
+------------------------------------------------------------------------
+OVERVIEW
+------------------------------------------------------------------------
+Total revenue (all stores):    $1,119,510.00
+Total transactions (all stores): 1,990
+Number of stores:             5
+
+------------------------------------------------------------------------
+Q1. HIGHEST REVENUE STORE
+------------------------------------------------------------------------
+Top store: Banjara Hills Store (Banjara Hills)
+  Revenue:            $233,260.00
+  Transactions:       398
+  Avg transaction:    $586.08
+
+Full store revenue ranking:
+  Rank 1  Banjara Hills Store      $233,260.00  txns=398
+  Rank 2  Ameerpet Store           $223,845.00  txns=403
+  Rank 3  HITEC City Store         $223,385.00  txns=364
+  Rank 4  Dilsukhnagar Store       $220,140.00  txns=411
+  Rank 5  Kukatpally Store         $218,880.00  txns=414
+
+------------------------------------------------------------------------
+Q2. TOP 5 BEST-SELLING PRODUCTS BY QUANTITY
+------------------------------------------------------------------------
+  #1  Mineral Water 1L           qty=   862  rev=$21,550.00
+  #2  Shampoo 200ml              qty=   847  rev=$101,640.00
+  #3  Turmeric Powder 100g       qty=   830  rev=$37,350.00
+  #4  Biscuits Mix 200g          qty=   823  rev=$32,920.00
+  #5  Wheat Flour 1kg            qty=   805  rev=$28,175.00
+Best seller: Mineral Water 1L (862 units)
+
+------------------------------------------------------------------------
+Q3. STORE RANKINGS (revenue & transaction count)
+------------------------------------------------------------------------
+  Banjara Hills Store   rev_rank=1  txn_rank=4  rev=$233,260.00
+  Ameerpet Store        rev_rank=2  txn_rank=3  rev=$223,845.00
+  HITEC City Store      rev_rank=3  txn_rank=5  rev=$223,385.00
+  Dilsukhnagar Store    rev_rank=4  txn_rank=2  rev=$220,140.00
+  Kukatpally Store      rev_rank=5  txn_rank=1  rev=$218,880.00
+
+------------------------------------------------------------------------
+Q4. MOST PROFITABLE (HIGHEST-REVENUE) PRODUCT PER STORE
+------------------------------------------------------------------------
+NOTE: True profit requires unit cost, which is not in the source data.
+      Revenue contribution is used as the profitability proxy.
+  HITEC City Store     -> Basmati Rice 5kg           rev=$68,850.00  share=30.82%
+  Banjara Hills Store  -> Basmati Rice 5kg           rev=$68,850.00  share=29.52%
+  Ameerpet Store       -> Basmati Rice 5kg           rev=$66,150.00  share=29.55%
+  Kukatpally Store     -> Basmati Rice 5kg           rev=$45,000.00  share=20.56%
+  Dilsukhnagar Store   -> Basmati Rice 5kg           rev=$63,900.00  share=29.03%
+
+------------------------------------------------------------------------
+Q5. MONTH-ON-MONTH SALES TREND
+------------------------------------------------------------------------
+Largest MoM growth: HITEC City Store in 2024-11 (+193.50%)
+Largest MoM decline: Dilsukhnagar Store in 2024-07 (-67.34%)
+
+------------------------------------------------------------------------
+Q6. STORE PRODUCT DIVERSITY
+------------------------------------------------------------------------
+  Rank 1  Dilsukhnagar Store    products= 14  categories=7
+  Rank 1  Kukatpally Store      products= 14  categories=7
+  Rank 1  Banjara Hills Store   products= 14  categories=7
+  Rank 1  Ameerpet Store        products= 14  categories=7
+  Rank 1  HITEC City Store      products= 14  categories=7
+Most diverse:  Dilsukhnagar Store (14 unique products)
+Least diverse: HITEC City Store (14 unique products)
+
+------------------------------------------------------------------------
+FILES PRODUCED
+------------------------------------------------------------------------
+  1_store_revenue_2024.csv
+  2_top5_products_by_quantity.csv
+  3_store_rankings.csv
+  4_most_profitable_product_per_store.csv
+  5_monthly_sales_trend_by_store.csv
+  6_store_product_diversity.csv
+  chart_1_revenue_by_store.png
+  chart_2_top5_products.png
+  chart_3_store_rankings.png
+  chart_4_top_product_per_store.png
+  chart_4b_product_share_by_store.png
+  chart_5_monthly_trend.png
+  chart_6_diversity.png
+  sales_summary_report.txt
+========================================================================

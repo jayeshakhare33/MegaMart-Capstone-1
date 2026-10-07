@@ -1,0 +1,6 @@
+supplier_id,supplier_name,total_purchase_orders,delivered_orders,failed_or_incomplete_orders,delivery_reliability_pct,average_lead_time_days,minimum_lead_time_days,maximum_lead_time_days,reliability_definition
+2,XYZ Foods Distribution,61,53,8,86.89,8.53,3,14,RELIABILITY_BASED_ON_DELIVERED_ORDERS
+1,ABC Wholesale Pvt Ltd,49,42,7,85.71,8.48,3,14,RELIABILITY_BASED_ON_DELIVERED_ORDERS
+5,Premium Imports Ltd,58,48,10,82.76,8.25,3,14,RELIABILITY_BASED_ON_DELIVERED_ORDERS
+3,Fresh Produce Co,64,49,15,76.56,8.41,3,14,RELIABILITY_BASED_ON_DELIVERED_ORDERS
+4,Dairy Supplies International,68,51,17,75.0,8.59,3,14,RELIABILITY_BASED_ON_DELIVERED_ORDERS

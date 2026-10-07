@@ -115,42 +115,65 @@ AUDIT_TABLES = {
 
 
 # =============================================================================
-# GOLD TABLE NAMES
+# GOLD LAYER — VIEWS AND TABLES
+#
+# The gold layer uses 10 views + 1 table (replacing 18 physical tables).
+# Views are defined in gold_layer_views.sql and compute on demand from
+# Silver — no storage, no stale data, no manual updates.
+#
+# The only gold table is reorder_recommendations (complex Python logic
+# in 05_inventory_optimizer.py that benefits from materialization).
+#
+# View inventory:
+#   store_performance      — store-level sales, rankings, diversity, KPIs,
+#                            inventory health (5 rows)
+#   product_performance    — store×product sales, velocity, rankings (70 rows)
+#   top_products           — top 5 products by quantity (5 rows)
+#   monthly_store_trends   — per-store monthly sales with MoM (60 rows)
+#   monthly_kpis           — chain-wide monthly KPIs with MoM (12 rows)
+#   category_kpis          — category-level KPIs with revenue share (7 rows)
+#   enterprise_kpi         — single-row chain-wide summary (1 row)
+#   inventory_status       — stock status by store×product (70 rows)
+#   supplier_scorecard     — supplier delivery performance (12 rows)
+#   store_category_top3    — top 3 categories per store by revenue (15 rows)
 # =============================================================================
 
-GOLD_TABLES = {
-    "store_sales_summary": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.store_sales_summary"
+GOLD_VIEWS = {
+    "store_performance": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.store_performance"
+    ),
+    "product_performance": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.product_performance"
     ),
     "top_products": (
         f"{CATALOG_NAME}.{GOLD_SCHEMA}.top_products"
     ),
-    "store_revenue_ranking": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.store_revenue_ranking"
+    "monthly_store_trends": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.monthly_store_trends"
     ),
-    "monthly_store_sales": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.monthly_store_sales"
+    "monthly_kpis": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.monthly_kpis"
     ),
-    "product_store_sales": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.product_store_sales"
+    "category_kpis": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.category_kpis"
     ),
-    "store_product_diversity": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.store_product_diversity"
+    "enterprise_kpi": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.enterprise_kpi"
     ),
     "inventory_status": (
         f"{CATALOG_NAME}.{GOLD_SCHEMA}.inventory_status"
     ),
-    "product_velocity": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.product_velocity"
-    ),
     "supplier_scorecard": (
         f"{CATALOG_NAME}.{GOLD_SCHEMA}.supplier_scorecard"
     ),
+    "store_category_top3": (
+        f"{CATALOG_NAME}.{GOLD_SCHEMA}.store_category_top3"
+    ),
+}
+
+GOLD_TABLES = {
     "reorder_recommendations": (
         f"{CATALOG_NAME}.{GOLD_SCHEMA}.reorder_recommendations"
-    ),
-    "store_kpis": (
-        f"{CATALOG_NAME}.{GOLD_SCHEMA}.store_kpis"
     ),
 }
 
